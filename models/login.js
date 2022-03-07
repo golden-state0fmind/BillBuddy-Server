@@ -11,11 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.login.hasOne(models.user)
     }
   }
   login.init({
-    loginID: DataTypes.INTEGER,
+    loginId: DataTypes.INTEGER,
     userName: DataTypes.STRING,
+    userId: DataTypes.INTEGER,
     password: DataTypes.STRING
   }, {
     sequelize,
