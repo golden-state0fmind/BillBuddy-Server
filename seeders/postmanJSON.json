@@ -1,0 +1,48 @@
+[
+    {
+    "id":3,
+    "userId":3,
+    "loginId":4,
+    "individualTicketId":2,
+    "fname":"edit this Name",
+    "lname":"last name edit",
+    "email":"@gmail.com",
+    "phoneNumber": "9516631859"
+},{
+    "groupTicketId": 0,
+    "userId": 1,
+    "itemsId": 2,
+    "locationId": 2,
+    "title": "Test Restaurant #456",
+    "groupTotal": 74.63,
+    "tip": 15.37
+},{
+    "individualTicketId": 12,
+    "groupticketId": 2,
+    "userId": 3,
+    "locationId": 202,
+    "itemsId": 90,
+    "individualTotal": 23.74,
+    "title": "Test CREATE Individual Ticket!!"
+},{
+    "locationId": 2022,
+    "localTaxes": 8.7,
+    "locationName": "TESTE LOCATION #123"
+},{
+    "itemsId": 2,
+    "groupticketId": 92,
+    "userId": 3,
+    "transactionId": 2089,
+    "cost": 90.89,
+    "description": "Truffle Fries",
+    "quantity": 9
+},{
+    "userId":2,
+    "groupticketId":2033
+},{
+    "loginId": 23,
+    "userName": "user987654",
+    "userId": 2,
+    "password":"#$r6&*Qd0c"
+}
+]
