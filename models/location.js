@@ -11,10 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.location.hasMany(models.groupticket);
     }
   }
   location.init({
-    locationID: DataTypes.INTEGER,
+    locationId: DataTypes.INTEGER,
     localTaxes: DataTypes.FLOAT,
     locationName: DataTypes.STRING
   }, {
