@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   friend.init({
-    userID: DataTypes.INTEGER,
-    groupTicketID: DataTypes.INTEGER
+    userId: DataTypes.INTEGER,
+    groupticketId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'friend',
