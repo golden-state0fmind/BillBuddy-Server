@@ -1,20 +1,23 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('groupTickets', {
+    await queryInterface.createTable('grouptickets', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      groupTicketID: {
+      groupTicketId: {
         type: Sequelize.INTEGER
       },
-      itemsID: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      locationID: {
+      itemsId: {
+        type: Sequelize.INTEGER
+      },
+      locationId: {
         type: Sequelize.INTEGER
       },
       title: {
@@ -37,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('groupTickets');
+    await queryInterface.dropTable('grouptickets');
   }
 };
