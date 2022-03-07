@@ -11,14 +11,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.user.hasOne(models.login) // one to one with login table
+      // one to many with friends table
+      models.user.hasMany(models.groupticket)
+      models.user.belongsTo(models.individualTicket)
+      models.user.hasMany(models.friend)
+      models.user.belongsToMany(models.groupticket, { through: 'friend' })
     }
   }
   user.init({
-    userID: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     fname: DataTypes.STRING,
     lname: DataTypes.STRING,
     email: DataTypes.STRING,
-    phoneNumber: DataTypes.INTEGER
+    phoneNumber: DataTypes.STRING,
+    individualTicketId: DataTypes.INTEGER,
+    loginId: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'user',
