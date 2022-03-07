@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class groupTicket extends Model {
+  class groupticket extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,18 +11,26 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      //location association
+      models.groupticket.belongsTo(models.location);
+      //friends association
+      models.groupticket.hasMany(models.individualTicket);
+      //items association
+      models.groupticket.hasMany(models.item);
+      models.groupticket.belongsToMany(models.user, { through: 'friend' })
     }
   }
-  groupTicket.init({
-    groupTicketID: DataTypes.INTEGER,
-    itemsID: DataTypes.INTEGER,
-    locationID: DataTypes.INTEGER,
+  groupticket.init({
+    groupTicketId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
+    itemsId: DataTypes.INTEGER,
+    locationId: DataTypes.INTEGER,
     title: DataTypes.STRING,
     groupTotal: DataTypes.FLOAT,
     tip: DataTypes.FLOAT
   }, {
     sequelize,
-    modelName: 'groupTicket',
+    modelName: 'groupticket',
   });
-  return groupTicket;
+  return groupticket;
 };
