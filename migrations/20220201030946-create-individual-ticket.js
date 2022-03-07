@@ -8,16 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      individualTicket: {
+      individualTicketId: {
         type: Sequelize.INTEGER
       },
-      userID: {
+      groupticketId: {
         type: Sequelize.INTEGER
       },
-      locationID: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      itemsID: {
+      locationId: {
+        type: Sequelize.INTEGER
+      },
+      itemsId: {
         type: Sequelize.INTEGER
       },
       individualTotal: {
