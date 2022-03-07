@@ -8,7 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userID: {
+      userId: {
+        type: Sequelize.INTEGER
+      },
+      loginId: {
+        type: Sequelize.INTEGER
+      },
+      individualTicketId: {
         type: Sequelize.INTEGER
       },
       fname: {
@@ -21,7 +27,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       phoneNumber: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
