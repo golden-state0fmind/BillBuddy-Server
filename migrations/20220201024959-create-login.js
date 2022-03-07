@@ -8,11 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      loginID: {
+      loginId: {
         type: Sequelize.INTEGER
       },
       userName: {
         type: Sequelize.STRING
+      },
+      userId: {
+        type: Sequelize.INTEGER
       },
       password: {
         type: Sequelize.STRING
