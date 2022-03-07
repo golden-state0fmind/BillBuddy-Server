@@ -11,13 +11,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.individualTicket.belongsTo(models.groupticket)
+      models.individualTicket.hasMany(models.user)
     }
   }
   individualTicket.init({
-    individualTicket: DataTypes.INTEGER,
-    userID: DataTypes.INTEGER,
-    locationID: DataTypes.INTEGER,
-    itemsID: DataTypes.INTEGER,
+    individualTicketId: DataTypes.INTEGER,
+    groupticketId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
+    locationId: DataTypes.INTEGER,
+    itemsId: DataTypes.INTEGER,
     individualTotal: DataTypes.FLOAT,
     title: DataTypes.STRING
   }, {
