@@ -11,12 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.item.belongsTo(models.groupticket)
     }
   }
   item.init({
-    itemsID: DataTypes.INTEGER,
-    userID: DataTypes.INTEGER,
-    transactionID: DataTypes.INTEGER,
+    itemsId: DataTypes.INTEGER,
+    groupticketId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
+    transactionId: DataTypes.INTEGER,
     cost: DataTypes.FLOAT,
     description: DataTypes.STRING,
     quantity: DataTypes.INTEGER
